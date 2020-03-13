@@ -29,7 +29,6 @@ document.getElementById("rb20").addEventListener("click", () => {
     console.log(maxround);
 })
 
-
 //funktionen des wahl des nutzer
 document.getElementById("stein").addEventListener("click", () => {
     nutzerWahl = 0;
@@ -108,7 +107,21 @@ function spielFunction() {
 
         }
     }
+    else if (maxround == round && usercounter > comcounter) {
+        document.getElementById("h1-ergebnis").innerHTML = "YOU WIN"
+    }
+    else if (maxround == round && usercounter < comcounter) {
+        document.getElementById("h1-ergebnis").innerHTML = "GAME OVER!"
+    }
+    else if (maxround == round && usercounter == comcounter) {
+        document.getElementById("h1-ergebnis").innerHTML = "="
+    }
+
+
+
+
     document.getElementById("h1-erg-zeigen").innerHTML = `${usercounter} : ${comcounter} `;
+
 
 }
 

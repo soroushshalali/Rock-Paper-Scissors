@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7b691a6b0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section id="sec-1">
+            <h3>how many rounds?</h3>
+            <div id="div-radio">
+                <div>
+                    <input id="rb5" type="radio" name="radio">
+                    <label for="rb5">5</label>
+                </div>
+                <div>
+
+                    <input id="rb10" type="radio" name="radio">
+                    <label for="rb10">10</label>
+                </div>
+                <div>
+
+                    <input id="rb15" type="radio" name="radio">
+                    <label for="rb15">15</label>
+                </div>
+                <div>
+
+                    <input id="rb20" type="radio" name="radio">
+                    <label for="rb20">20</label>
+                </div>
+            </div>
+            <h2 id="round-counter"></h2>
+        </section>
+
+        <section id="ergebnis">
+            <span id="user">USER</span>
+            <h1 id="h1-erg-zeigen">0 : 0</h1>
+            <span id="com">COMP</span>
+        </section>
+        <h1 id="h1-ergebnis">Lets play</h1>
+        <section id="sec-HPS">
+            <button onclick="spielFunction()" id="papier">&#9995;</button>
+            <button onclick="spielFunction()" id="stein">&#9994;</button>
+            <button onclick="spielFunction()" id="schere">&#9996;</button>
+        </section>
+        <h2>make your move</h2>
+        <span id="restart">restart</span>
+
+    </main>
+
+
+
+
+
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

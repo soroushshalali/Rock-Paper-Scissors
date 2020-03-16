@@ -4,6 +4,8 @@ let nutzerWahl; //whal des nutzer
 let round = -1;
 let usercounter = 0;
 let comcounter = 0;
+let sumPointsUser = 0;
+let sumPointscom = 0;
 
 //random number
 function getRndInteger() {
@@ -15,24 +17,38 @@ function getRndInteger() {
 document.getElementById("rb5").addEventListener("click", () => {
     maxround = 5;
     console.log(maxround);
+    document.getElementById("schere").style.animationName = "ani1";
+    document.getElementById("papier").style.animationName = "ani1";
+    document.getElementById("stein").style.animationName = "ani1";
+
 })
 document.getElementById("rb10").addEventListener("click", () => {
     maxround = 10;
     console.log(maxround);
+    document.getElementById("schere").style.animationName = "ani1";
+    document.getElementById("papier").style.animationName = "ani1";
+    document.getElementById("stein").style.animationName = "ani1";
 })
 document.getElementById("rb15").addEventListener("click", () => {
     maxround = 15;
     console.log(maxround);
+    document.getElementById("schere").style.animationName = "ani1";
+    document.getElementById("papier").style.animationName = "ani1";
+    document.getElementById("stein").style.animationName = "ani1";
 })
 document.getElementById("rb20").addEventListener("click", () => {
     maxround = 20;
     console.log(maxround);
+    document.getElementById("schere").style.animationName = "ani1";
+    document.getElementById("papier").style.animationName = "ani1";
+    document.getElementById("stein").style.animationName = "ani1";
 })
 
 //funktionen des wahl des nutzer
 document.getElementById("stein").addEventListener("click", () => {
     nutzerWahl = 0;
-    console.log(nutzerWahl)
+    console.log(nutzerWahl);
+
 })
 document.getElementById("papier").addEventListener("click", () => {
     nutzerWahl = 1;
@@ -117,18 +133,34 @@ function spielFunction() {
         document.getElementById("h1-ergebnis").innerHTML = "="
     }
 
-
-
-
     document.getElementById("h1-erg-zeigen").innerHTML = `${usercounter} : ${comcounter} `;
 
-
 }
+
+// witer spielen
+document.getElementById("weiterspielen").addEventListener("click", () => {
+    document.getElementById("div-radio").style.display = "grid";
+    document.getElementById("round-counter").innerHTML = "";
+    document.getElementById("h1-ergebnis").innerHTML = "Lets play";
+    document.getElementById("h1-erg-zeigen").innerHTML = "0 : 0";
+    document.getElementById("rb5").checked = false;
+    document.getElementById("rb10").checked = false;
+    document.getElementById("rb15").checked = false;
+    document.getElementById("rb20").checked = false;
+    round = -1;
+    sumPointsUser += usercounter;
+    console.log("user" + sumPointsUser);
+    sumPointscom += comcounter;
+    console.log("com" + sumPointscom);
+    usercounter = 0;
+    comcounter = 0;
+    maxround = 0;
+    document.getElementById("sumpointsuser").innerHTML = `User: ${sumPointsUser}`;
+    document.getElementById("sumpointscom").innerHTML = `Com: ${sumPointsUser}`;
+
+})
 
 //funktion für page-refresh(clear)
 document.getElementById("restart").addEventListener("click", () => {
     location.reload();
 })
-
-
-

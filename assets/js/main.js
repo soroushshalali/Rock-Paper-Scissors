@@ -1,3 +1,6 @@
+
+
+
 let maxround = 0; //maximal round zum spielen
 let random; //random zahl
 let nutzerWahl; //whal des nutzer
@@ -14,7 +17,10 @@ function getRndInteger() {
 }
 
 
-//radiobtn
+//ich habe mit "addEventListener" ⬇️  geschrieben , weil ich es üben wollte aber vielleicht
+//kannst du mir kurz schreiben ,wenn wir viele Funktionen schreiben,wird die APP oder Webseite langsam oder ist egal???? 
+//danke 
+//radiobtn 
 document.getElementById("rb5").addEventListener("click", () => {
     maxround = 5;
     console.log(maxround);

@@ -144,6 +144,7 @@ main{
     font-size: 1.5em;
     margin-top: 3vh;
     transition: 0.5s;
+    cursor: pointer;
 }
 #restart:hover{
     color: red;

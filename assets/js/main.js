@@ -1,7 +1,7 @@
 let maxround = 0; //maximal round zum spielen
 let random; //random zahl
 let nutzerWahl; //whal des nutzer
-let round = -1;
+let round = 0;
 let usercounter = 0;
 let comcounter = 0;
 let sumPointsUser = 0;
@@ -13,6 +13,7 @@ function getRndInteger() {
     console.log("randomzahl:" + random);
 }
 
+
 //radiobtn
 document.getElementById("rb5").addEventListener("click", () => {
     maxround = 5;
@@ -20,6 +21,7 @@ document.getElementById("rb5").addEventListener("click", () => {
     document.getElementById("schere").style.animationName = "ani1";
     document.getElementById("papier").style.animationName = "ani1";
     document.getElementById("stein").style.animationName = "ani1";
+    console.log("eb5");
 
 })
 document.getElementById("rb10").addEventListener("click", () => {
@@ -28,6 +30,7 @@ document.getElementById("rb10").addEventListener("click", () => {
     document.getElementById("schere").style.animationName = "ani1";
     document.getElementById("papier").style.animationName = "ani1";
     document.getElementById("stein").style.animationName = "ani1";
+    console.log("eb10");
 })
 document.getElementById("rb15").addEventListener("click", () => {
     maxround = 15;
@@ -35,6 +38,7 @@ document.getElementById("rb15").addEventListener("click", () => {
     document.getElementById("schere").style.animationName = "ani1";
     document.getElementById("papier").style.animationName = "ani1";
     document.getElementById("stein").style.animationName = "ani1";
+    console.log("eb15");
 })
 document.getElementById("rb20").addEventListener("click", () => {
     maxround = 20;
@@ -42,6 +46,7 @@ document.getElementById("rb20").addEventListener("click", () => {
     document.getElementById("schere").style.animationName = "ani1";
     document.getElementById("papier").style.animationName = "ani1";
     document.getElementById("stein").style.animationName = "ani1";
+    console.log("eb20");
 })
 
 //funktionen des wahl des nutzer
@@ -156,7 +161,7 @@ document.getElementById("weiterspielen").addEventListener("click", () => {
     comcounter = 0;
     maxround = 0;
     document.getElementById("sumpointsuser").innerHTML = `User: ${sumPointsUser}`;
-    document.getElementById("sumpointscom").innerHTML = `Com: ${sumPointsUser}`;
+    document.getElementById("sumpointscom").innerHTML = `Com: ${sumPointscom}`;
 
 })
 
